@@ -1,0 +1,7 @@
+.idea
+atlassian-ide-plugin.xml
+*.iml
+classes
+.gradle
+cache/
+datatypes/build/
