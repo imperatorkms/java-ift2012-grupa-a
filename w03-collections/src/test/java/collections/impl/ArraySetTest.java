@@ -16,4 +16,10 @@ public class ArraySetTest {
         assertEquals(set.size(), 0);
     }
 
+    @Test
+    public void empty_set_should_have_empty_true() {
+        ArraySet set = new ArraySet();
+        assertEquals(set.isEmpty(), true);
+    }
+
 }
