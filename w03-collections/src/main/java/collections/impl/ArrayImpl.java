@@ -1,9 +1,22 @@
+// zmiany: utworzenie pol i konstruktora
+
 package collections.impl;
+import java.util.Arrays;
 
 public class ArrayImpl {
 
-    
+    int rozmiar;
+    int array[] = new int[rozmiar];
+
+    public ArrayImpl(int podaj_rozmiar)
+    {
+        rozmiar = podaj_rozmiar;
+    }
+
     public void add(Object element) {
+        if(array[rozmiar] != 0)                           // poki co
+            array = Arrays.copyOf(rozmiar, rozmiar*2);
+        // dalej...
     }
 
   
@@ -19,4 +32,5 @@ public class ArrayImpl {
     
     public void remove(int index) {
     }
+
 }
