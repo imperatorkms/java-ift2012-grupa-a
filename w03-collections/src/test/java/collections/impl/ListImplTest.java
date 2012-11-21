@@ -88,4 +88,54 @@ public class ListImplTest {
         // tablica 11 8 9 null
         assertEquals(list.get(3), null);
     }
+
+
+    @Test (expectedExceptions = IllegalArgumentException.class)
+    public void should_throw_exception_when_given_negative_size() {
+
+        ArrayImpl list = new ArrayImpl(-1);
+
+    }
+
+
+    @Test
+    public void should_handle_zero_sized_array() {
+        ArrayImpl list = new ArrayImpl(0);
+
+        list.add(1);
+        list.add(2);
+
+        assertEquals(list.size(), 2);
+    }
+
+
+    @Test
+    public void array_should_return_proper_size_after_removing_element() {
+
+        ArrayImpl list = new ArrayImpl(4);
+
+        assertEquals(list.size(), 0);
+
+        list.add(1);
+        list.add(2);
+
+        assertEquals(list.size(), 2);
+
+
+        list.remove(0);
+
+        assertEquals(list.size(), 1);
+
+    }
+
+
+    @Test (expectedExceptions = IllegalArgumentException.class)
+    public void should_throw_exception_when_given_illegal_index() {
+
+        ArrayImpl list = new ArrayImpl();
+
+        list.remove(-100);
+
+    }
+
 }
