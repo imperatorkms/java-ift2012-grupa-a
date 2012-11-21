@@ -29,4 +29,19 @@ public class HashMap {
     public Object keySet() {
         return null;
     }
+
+    public boolean containsKey(Object value) {
+
+        return false;
+    }
+
+    public boolean containsValue(Object value) {
+
+        return false;
+    }
+
+    public ArrayImpl values() {
+        return new ArrayImpl();
+    }
+
 }
