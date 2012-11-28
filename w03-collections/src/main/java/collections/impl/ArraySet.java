@@ -11,7 +11,7 @@ public class ArraySet {
     private int my_capasity=10;
     private  int[] tablica= new int[10] ;
 
-    ArraySet(int start_capasity){
+    public ArraySet(int start_capasity){
         if(start_capasity>my_capasity)
         {
             my_capasity=start_capasity;
@@ -19,7 +19,7 @@ public class ArraySet {
         }
     }
 
-    ArraySet(){
+    public ArraySet(){
     }
 
     public void add(int element) {
