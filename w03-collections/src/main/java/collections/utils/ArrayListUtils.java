@@ -1,4 +1,4 @@
-package collections.utils;
+    package collections.utils;
 
 import collections.impl.ArrayImpl;
 
@@ -12,12 +12,44 @@ public class ArrayListUtils {
 
     public int max(ArrayImpl list) {
 
-        throw new IllegalArgumentException("array is null or empty");
+        Object obj = list.get(0);
+        if (obj == null)
+            throw new IllegalArgumentException("array is null or empty");
+        Object h;
+        int result = Integer.parseInt(obj.toString());
+        int s;
+
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i) != null){
+                h = list.get(i);
+                s = Integer.parseInt(h.toString());
+                if (s > result)
+                    result = s;
+            }
+        }
+        return result;
+
     }
 
     public int min(ArrayImpl list) {
 
-        throw new IllegalArgumentException("array is null or empty");
+        Object obj = list.get(0);
+        if (obj == null)
+            throw new IllegalArgumentException("array is null or empty");
+        Object h;
+        int result = Integer.parseInt(obj.toString());
+        int s;
+
+        for (int i = 1; i < list.size(); i++) {
+            if (list.get(i) != null){
+                h = list.get(i);
+                s = Integer.parseInt(h.toString());
+                if (s < result)
+                    result = s;
+            }
+        }
+        return result;
+
     }
 
     public ArrayImpl reverse(ArrayImpl list) {

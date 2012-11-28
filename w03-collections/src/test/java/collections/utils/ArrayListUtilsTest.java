@@ -30,12 +30,30 @@ public class ArrayListUtilsTest {
         assertEquals(utils.max(list), 0);
     }
 
+    @Test
+    public void max_mth_should_return_max(){
+        ArrayImpl list = new ArrayImpl();
+        list.add(2);
+        list.add(5);
+        list.add(3);
+        assertEquals(utils.max(list), 5);
+    }
+
 
     @Test (expectedExceptions = IllegalArgumentException.class)
     public void min_mth_should_throw_exception_for_empty_array() {
 
         ArrayImpl list = new ArrayImpl();
         assertEquals(utils.min(list), 0);
+    }
+
+    @Test
+    public void min_mth_should_return_min_value(){
+        ArrayImpl list = new ArrayImpl();
+        list.add(2);
+        list.add(5);
+        list.add(3);
+        assertEquals(utils.min(list), 2);
     }
 
 
